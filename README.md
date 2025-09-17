@@ -4,7 +4,7 @@
 
 This GitHub repository contains the datasets (in `xlsx`, `csv`, and `mat` format) and all the code with the examples and figures contained in the book:
 
-### [Riani, M.](http://www.riani.it), Corbellini, A., Morelli, G., Laurini, F., Proietti, T., Grossi, L., Perrotta, D. and Torti, F. (2025). Data Science with MATLAB, third edition, Giappicchelli Editore.
+### [Riani, M.](http://www.riani.it), Corbellini, A., Morelli, G., Laurini, F., Proietti, T., Grossi, L., Perrotta, D. and Torti, F. (2025). Data Science with MATLAB, Giappicchelli Eds.
 
 1.  [Index](https://github.com/UniprJRC/DSwithMATLAB/tree/main/matlabfiles/risorse/indice.pdf)
 2.  [Preface](https://github.com/UniprJRC/DSwithMATLAB/tree/main/matlabfiles/risorse/prefazione.pdf)
@@ -26,9 +26,7 @@ The following links point to the resources of the chapter of interest (the name 
 9.  [Association](https://github.com/UniprJRC/DSwithMATLAB/tree/main/matlabfiles/capAssociazione) (capAssociazione)
 10. [Distances and similarity indices](https://github.com/UniprJRC/DSwithMATLAB/tree/main/matlabfiles/capDistanze) (capDistanze)
 11. [Dimensionality reduction](https://github.com/UniprJRC/DSwithMATLAB/tree/main/matlabfiles/capComponentiPrincipali) (capComponentiPrincipali)
-12. [Correspondence analysis](https://github.com/UniprJRC/DSwithMATLAB/tree/main/matlabfiles/capCorrispondenze) (capCorrispondenze)
-13. [Cluster analysis](https://github.com/UniprJRC/DSwithMATLAB/tree/main/matlabfiles/capClustering) (capClustering)
-14. [Time series analysis](https://github.com/UniprJRC/DSwithMATLAB/tree/main/matlabfiles/capSerieTemporali) (capSerieTemporali)
+
 
 ### Prerequisites:
 
