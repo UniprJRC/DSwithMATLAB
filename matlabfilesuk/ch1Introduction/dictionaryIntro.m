@@ -1,11 +1,13 @@
 load citiesItaly.mat
-% keys are created in string format
-nam=string(citiesItaly.Properties.RowNames);
-% Creazione del dictionary
-d=dictionary(nam,citiesItaly.unemploy);
-disp(d("Novara"))
+% Create keys as strings
+nam = string(citiesItaly.Properties.RowNames);
+% Create the dictionary
+d = dictionary(nam, citiesItaly.unemploy);
+disp(d)
 
 
-% Recupero del tasso di disoccupazione di Novare direttamente 
-% dalla table citiesItaly tramite i RowNames  
-taxDisoccNovara = citiesItaly{"Novara", "unemploy"};
+% Unemployment rate of novara
+d("Novara")
+
+% Unemployment rate of novara using table extraction
+unemployNovara = citiesItaly{"Novara", "unemploy"};
