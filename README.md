@@ -8,7 +8,7 @@ This GitHub repository contains the datasets (in `xlsx`, `csv`, and `mat` format
 
 1.  [Index](https://github.com/UniprJRC/DSwithMATLAB/tree/main/matlabfiles/resources/index.pdf)
 2.  [Preface](https://github.com/UniprJRC/DSwithMATLAB/tree/main/matlabfiles/resources/preface.pdf)
-3.  [Software and accompanying material](https://github.com/UniprJRC/DSwithMATLAB/tree/main/matlabfiles/resources/supporting_material.pdf)
+3.  [Software and supporting material](https://github.com/UniprJRC/DSwithMATLAB/tree/main/matlabfiles/resources/supporting_material.pdf)
 
 
 All examples have been tested with MATLAB ver. 2025a, but are backward compatible with version 2022a.
@@ -37,4 +37,3 @@ To report typos, inaccuracies, and modifications, please use the `Issues` button
 ... and create a new entry.
 
 
-https://github.com/UniprJRC/DataScienceWithMatlab/tree/main/matlabMfilesUK/ch3UnivariatePIvot
