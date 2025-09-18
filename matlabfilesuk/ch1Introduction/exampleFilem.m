@@ -1,4 +1,4 @@
-% Draw a normal random variable with the following parameters.
+% Draw a normal random variable with the following parameters and domain.
 
 %% Parameters of the random variable
 mu = 0; 
