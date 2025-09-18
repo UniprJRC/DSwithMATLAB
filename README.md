@@ -15,7 +15,7 @@ All examples have been tested with MATLAB ver. 2025a, but are backward compatibl
 
 The following links point to the resources of the chapter of interest (the name of the folder containing the files is shown in parentheses).
 
-1.  [Introduction to using MATLAB and data management](https://github.com/UniprJRC/DSwithMATLAB/tree/main/matlabfilesUK/ch1Introduction)) (ch1Introduction)
+1.  [Introduction to using MATLAB and data management](https://github.com/UniprJRC/DSwithMATLAB/tree/main/matlabfilesuk/ch1Introduction)) (ch1Introduction)
 2.  [Linear algebra](https://github.com/UniprJRC/DSwithMATLAB/tree/main/matlabfiles/ch2Algebra) (ch2Algebra)
 3.  [Exploratory data analysis and pivot tables](https://github.com/UniprJRC/DSwithMATLAB/tree/main/matlabfiles/ch3UnivariatePIvot) (ch3UnivariatePIvot)
 4.  [Importing data from the web (in real time)](https://github.com/UniprJRC/DSwithMATLAB/tree/main/matlabfiles/ch4Imports) (ch4Imports)
