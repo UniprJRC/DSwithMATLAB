@@ -30,7 +30,7 @@ The following links point to the resources of the chapter of interest (the name 
 
 ### Prerequisites:
 
-Read this [guide](https://github.com/UniprJRC/DSwithMATLAB/tree/main/matlabfilesuk/resources/supporting_material.pdf) which illustrates the steps to have a correctly configured MATLAB environment to run the examples in the book.
+Read this [guide](https://github.com/UniprJRC/DSwithMATLAB/tree/main/resources/supporting_material.pdf) which illustrates the steps to have a correctly configured MATLAB environment to run the examples in the book.
 
 To report typos, inaccuracies, and modifications, please use the `Issues` button...
 ![Issues](https://github.com/UniprJRC/DSwithMATLAB/blob/main/issues.jpg?raw=true)
