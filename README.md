@@ -6,9 +6,9 @@ This GitHub repository contains the datasets (in `xlsx`, `csv`, and `mat` format
 
 ### [Riani, M.](http://www.riani.it), Corbellini, A., Atkinson, A.C., Grossi, L., Laurini, F., Morelli, G., Perrotta, D. and Torti, F. (2025). Data Science with MATLAB, Giappicchelli Eds.
 
-1.  [Index](https://github.com/UniprJRC/DSwithMATLAB/tree/main/matlabfilesuk/resources/index.pdf)
-2.  [Preface](https://github.com/UniprJRC/DSwithMATLAB/tree/main/matlabfilesuk/resources/preface.pdf)
-3.  [Software and supporting material](https://github.com/UniprJRC/DSwithMATLAB/tree/main/matlabfilesuk/resources/supporting_material.pdf)
+1.  [Index](https://github.com/UniprJRC/DSwithMATLAB/tree/main/resources/index.pdf)
+2.  [Preface](https://github.com/UniprJRC/DSwithMATLAB/tree/main/resources/preface.pdf)
+3.  [Software and supporting material](https://github.com/UniprJRC/DSwithMATLAB/tree/main/resources/supporting_material.pdf)
 
 
 All examples have been tested with MATLAB ver. 2025a, but are backward compatible with version 2022a.
