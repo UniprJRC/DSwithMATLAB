@@ -7,5 +7,5 @@ for i=1:length(pp)
 end
 
 lab = "Norm p=" + string(pp);
-normeT = array2table(norme, "RowNames", lab, "VariableNames", "Norme");
+normeT = array2table(norme, "RowNames", lab, "VariableNames", "Norms");
 disp(normeT)
