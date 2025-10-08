@@ -1,5 +1,7 @@
 % Empirical Monte Carlo distribution of r
-rho    = 0.4; n = 7; nsimul = 10000;
+rho    = 0.4; 
+n = 7; 
+nsimul = 10000;
 Rall   = zeros(nsimul,1);
 Sigma  = [1 rho; rho 1];
 for i = 1:nsimul
