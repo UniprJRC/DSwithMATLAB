@@ -1,11 +1,14 @@
-%% rho=1 e r<1
-x=(1:6)'; y=2+3*x;
+% Generate six points along a line with positive slope
+x = (1:6)';
+y = 2 + 3*x;
+% Alter one point to break exact linearity but keep perfect ranking
 y(4)=12;
 scatter(x,y,'red','filled')
-xlabel('Coordinate x'); ylabel('Coordinate y')
-
-disp('Coefficiente di cograduazione')
+xlabel('x')
+ylabel('y')
+% Spearman rank correlation
+disp('Spearman rank correlation:')
 disp(corr(x,y,'Type','Spearman'))
-disp('Coefficiente di correlazione')
+% Pearson linear correlation
+disp('Pearson correlation:')
 disp(corr(x,y))
-% print -depsc figs\corrcograd.eps;
