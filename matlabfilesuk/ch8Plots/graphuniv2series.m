@@ -1,5 +1,5 @@
 %% Load data
-T = readtable("grafuniv2serie.xlsx",'Sheet','dati','ReadRowNames',true);
+T = readtable("grafuniv2serie.xlsx",'Sheet','data','ReadRowNames',true);
 Y = T{:,1:2};
 months = categorical(T.Properties.RowNames,T.Properties.RowNames);
 nr=2; nc=4;
