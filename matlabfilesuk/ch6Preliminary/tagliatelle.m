@@ -1,5 +1,5 @@
 %% Load data
-X = readtable('tagliatelle.xlsx','Sheet','Dati','Range','A1:C41');
+X = readtable('tagliatelle.xlsx','Sheet','Data','Range','A1:C41');
 disp(head(X,5))
 
 %% Missing-value analysis
@@ -58,7 +58,7 @@ disp(T)
 
 %% mdpattern with tagliatelle.xlsx
 
-X=readtable('tagliatelle.xlsx','Sheet','Dati','Range','A1:C41');
+X=readtable('tagliatelle.xlsx','Sheet','Data','Range','A1:C41');
 [Mispat,tMisAndOut]=mdpattern(X)
 % print -depsc figs\mdpattern.eps;
 

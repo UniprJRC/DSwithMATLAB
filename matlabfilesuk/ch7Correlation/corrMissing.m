@@ -1,4 +1,4 @@
-Xtable = readtable('tagliatelle.xlsx','Sheet','Dati','Range','A1:C41');
+Xtable = readtable('tagliatelle.xlsx','Sheet','Data','Range','A1:C41');
 X = Xtable{:,:};
 % Listwise deletion
 [~, pvalRhoList] = corr(X,'type','Spearman','rows','complete');
