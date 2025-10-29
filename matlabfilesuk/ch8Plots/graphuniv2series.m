@@ -22,7 +22,7 @@ title('100% stacked bars')
 
 subplot(nr,nc,5)
 area(months,100*Y./sum(Y,2))
-title('100% stacked area')
+title('100 stacked area')
 
 subplot(nr,nc,6)
 bar3(months,Y)
