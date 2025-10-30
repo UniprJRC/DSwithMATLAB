@@ -11,8 +11,7 @@ CITORDchk=sortrows(CIT,"RowNames");
 assert(isequal(CITord,CITORDchk),"Different ordering")
 
 
-% Add to COO variable la variabile addedval standardizzata
-% Chiamo la nuova variabile valagg
+% Add to COO variable addedval 
 COO.addedval=zscore(CITord.addedval);
 
 geobubble(COO,"LAT","LONG",'Basemap','streets','SizeVariable','addedval')

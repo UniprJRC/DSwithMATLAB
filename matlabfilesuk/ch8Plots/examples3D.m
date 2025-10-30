@@ -1,15 +1,16 @@
 
-% Mesh 
+%% Mesh 
 mesh(peaks)
 
-%% Mesh with contours
-meshc(peaks)
+%% Shaded 3D surface
+surf(peaks)
 
 %% Contours
 contour(peaks)
 
-%% Shaded 3D surface
-surf(peaks)
+%% Mesh with contours
+meshc(peaks)
+
 
 %% 
 [x,y]=meshgrid(-4:0.1:4)
@@ -22,5 +23,5 @@ meshc(x,y,z)
 %% Contours
 contour(x,y,z)
 
-%% Shaded 3D surface
-surf(x,y,z)
+%% Shaded 3D surface with contours
+surfc(x,y,z)

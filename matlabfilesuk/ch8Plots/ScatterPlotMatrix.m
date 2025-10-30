@@ -22,7 +22,7 @@ spmplot(Xt,'dispopt','box','overlay',overlay)
 
 %% spmplot with grouping variable
 
-% edu = variabile di raggruppamento
+% edu = grouping variable
 edu=XALLtable.Education;
 gplotmatrix(Xd,[],edu)
 
@@ -37,29 +37,27 @@ spmplot(Xt,'dispopt','box','overlay',overlay,'group',edu)
 
 %% fisheriris with grouping variable
 load fisheriris;
-% Definisco i nomi delle variabili e li inserisco nella struct plo
+
 plo=struct;
 plo.nameY={'SL','SW','PL','PW'};
 overlay=struct;
 overlay.type='contour';
-% Questa volta a spmplot viene passato un'array e non una table di
-% conseguenza è necessario dentro plo specificare i nomi delle variabili
+% Note that meas is not a table
+% therefore it is necessary to specify the names of the variables
 spmplot(meas,'group',species,'overlay',overlay,'plo',plo)
-% print -depsc spmplotIRIS.eps;
 
-% Osservazione: i gruppi possono essere nascosti/mostrati facendo click
-% sulla legenda
+% Remark: show/hide groups clicking on the legends
 
 %  spmplot(meas,species,plo,'hist');
  
-%% Nuovo 'Name',Value typespm dentro spmplot
+%% 'Name',Value typespm dentro spmplot
 
-%% spm triangolare inferiore e numeri sopra la diagonale
+%% spm with scatter (below the diagonal) and numbers (above the diagonal)
 typespm=struct;
 typespm.upper="number";
 spmplot(Xt,"typespm",typespm);
 
-%% spm triangolare superiore e cerchi sotto la diagonale
+%% spm with scatter (above the diagonal) and circles below the diagonal
 typespm=struct;
 typespm.lower="circle";
 spmplot(Xt,"typespm",typespm);
@@ -71,9 +69,9 @@ typespm.lower="square";
 spmplot(Xt,"typespm",typespm);
 
 %% spm  
-tipoSPM=struct;
-tipoSPM.lower="circle";
-spmplot(Xt,'group',edu,'typespm',tipoSPM);
+typeSPM=struct;
+typeSPM.lower="circle";
+spmplot(Xt,'group',edu,'typespm',typeSPM);
 
 
 
@@ -93,13 +91,12 @@ spmplot(citiesItaly2024,'typespm',typespm,'colorBackground',true, ...
     'order','AOE','nameYlength',5);
 
 
-%% Con variabile di raggruppamento
+%% Con grouping variable
 load fisheriris;
-% Definisco i nomi delle variabili e li inserisco nella struct plo
 plo=struct;
 plo.nameY={'SL','SW','PL','PW'};
-tipoSPM=struct;
-tipoSPM.upper="number";
+typeSPM=struct;
+typeSPM.upper="number";
 
-spmplot(meas,'group',species,'plo',plo,'typespm',tipoSPM);
+spmplot(meas,'group',species,'plo',plo,'typespm',typeSPM);
 

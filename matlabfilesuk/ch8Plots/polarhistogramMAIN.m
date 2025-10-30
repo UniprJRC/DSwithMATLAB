@@ -33,6 +33,9 @@ dv=["addedval" "depos" "pensions" "unemploy"];
 polarhistogramFS(citiesItaly,'DataVars',dv,'groupvars',z3,'nbins',10, ...
     'DisplayStyle','stairs','LineWidth',2);
 
-%% 
+%% Compare Polar histogram with histogram with classes
+figure
 zone=[repelem("N",46) repelem("CS",57)]';
 polarhistogramFS(citiesItaly(:,"addedval"),'nbins',10,'groupvars',zone);
+figure
+Freq=histFS(citiesItaly.addedval,10,zone);
