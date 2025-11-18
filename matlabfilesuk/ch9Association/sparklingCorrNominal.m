@@ -9,10 +9,10 @@ disp(Ntable)
 out=corrNominal(Ntable);
 
 %% corrNominal with  'name',value ,'datamatrix',true
- out=corrNominal([X.GUSTO X.ABBINAMENTO],'datamatrix',true);
+ out=corrNominal([X.Taste X.FoodPairing],'datamatrix',true);
 
 %% corrNominal with  'name',value ,'datamatrix',true and plots 1
 outCHK=corrNominal(X(:,["Taste" "FoodPairing"]),'datamatrix',true,'plots',1);
 
-%% Opzione plots
- out=corrNominal([X.GUSTO X.ABBINAMENTO],'datamatrix',true,'plots',true);
+%% Option plots
+ out=corrNominal([X.Taste X.FoodPairing],'datamatrix',true,'plots',true);
