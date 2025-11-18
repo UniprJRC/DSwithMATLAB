@@ -86,7 +86,7 @@ load citiesItaly2024.mat
 citiesItaly2024.Properties.Description
 typespm=struct;
 typespm.upper='number';
-typeepm.lower='scatter';
+typespm.lower='scatter';
 spmplot(citiesItaly2024,'typespm',typespm,'colorBackground',true, ...
     'order','AOE','nameYlength',5);
 
