@@ -8,12 +8,13 @@ text(X,y+2,XX.Properties.RowNames)
 % exportgraphics(gca,"scatterSales.pdf")
 
 %% Output with GUIregress
-
+figure
 GUIregress(X,y)
 % exportgraphics(gcf,"regr1.pdf")
 % exportgraphics(gcf,"regr2.pdf")
 
 
+figure
 GUIregress(X,y,'inferential',0.95)
 % exportgraphics(gcf,"regr3.pdf")
 
@@ -36,19 +37,21 @@ disp(conflev)
 
 
 %% Method plotSlide applied to mdl
+figure
 plotSlice(mdl)
-h = findall(groot, '-class', 'matlab.ui.Figure');
-exportapp(h(1), "plotSlice.pdf");
+% h = findall(groot, '-class', 'matlab.ui.Figure');
+% exportapp(h(1), "plotSlice.pdf");
 
 % exportgraphics(gcf,".pdf")
 
 
 %% Plot with error bars
+figure
 scatter(XX,"PRICES","SALES","filled")
 hold on 
 lwd=2;
 errorbar(x0,y0,conflev(:,2)-y0,'vertical','o','LineWidth',lwd)
-exportgraphics(gcf,"foreErrorBar.pdf")
+% exportgraphics(gcf,"foreErrorBar.pdf")
 
 %% Prediction curve
 x0=[1.52; 1.8];
@@ -56,5 +59,6 @@ x0=[1.52; 1.8];
 disp(conflev)
 
 %% Plot of residuals (not in the book)
+figure
 plotResiduals(mdl,"caseorder","MarkerSize",10,'LineWidth',10)
 plotResiduals(mdl,'probability')
