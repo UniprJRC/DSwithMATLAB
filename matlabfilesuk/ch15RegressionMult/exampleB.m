@@ -23,29 +23,6 @@ title('Regression Model 2: PRICE ~ ASSOR');
 xlabel('ASSOR');
 ylabel('PRICE');
 
-%% Set line widths
-
-lwdBands = 2; % Define line width for confidence bounds
-% Increase all dashed lines 
-dottedLines = findobj(groot,'Type','Line','LineStyle',':');
-set(dottedLines,'LineWidth',lwdBands);
-
-% Increase all continuous lines 
-lwdLine = 2.5; % Define line width for confidence bounds
-dashedLines = findobj(groot,'Type','Line','LineStyle','-');
-set(dashedLines,'LineWidth',lwdLine);
-
-% exportgraphics(gcf,'Punivreg.pdf')
-
-%% Alternative way using Named objects 
-% Increase all dashed lines (commonly used for bounds)
-% lb = findobj(gca,'DisplayName','95% conf. bounds');
-% lwdBands=4;
-% set(lb,'LineWidth',lwdBands);
-% lb = findobj(gca,'DisplayName','Fit');
-% lwdBands=4;
-% set(lb,'LineWidth',lwdBands);
-
 
 %% Multiple regression model
 mdl=fitlm(XX,'PRICE ~ PROMO + ASSOR' );
@@ -74,10 +51,12 @@ disp(Rp_table);
 
 
 %% Analysis of leverage points
+figure
 plotDiagnostics(mdl,"leverage")
 % exportgraphics(gcf,'levplot.pdf')
 
 %% Scatter of ASSOR agaoinst PROMO
+figure
 n=size(XX,1);
 scatter(XX,"PROMO","ASSOR")
 text(XX{:,"PROMO"},XX{:,"ASSOR"},num2str((1:n)'))
