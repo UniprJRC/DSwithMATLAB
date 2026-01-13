@@ -20,8 +20,6 @@ trend=(1:T)';
 
 X=[array2table(trend),array2table(D)];
 
-% X=table2timetable(X,"RowTimes",vdate);
-
 %% First parametrization (without intercept)
 mdl1=fitlm(X,y,'Intercept',false);
 

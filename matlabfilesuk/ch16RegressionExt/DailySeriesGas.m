@@ -1,21 +1,17 @@
+%% Data loading
 Y=readtable("DailySeriesGas.xlsx","Sheet","data",'Range','B1:C29');
 n=size(Y,1);
 
-RowTimes=(datetime(2024,2,1):datetime(2024,2,28))';
-
-%Y=table2timetable(XX(:,2),"RowTimes",RowTimes)
-
 % DayOfWeek is a categorical variable
+RowTimes=(datetime(2024,2,1):datetime(2024,2,28))';
 DayOfWeek=weekday(RowTimes);
-
 % Note that fitlm uses the first category as a reference level, 
 % so it does not include the indicator variable for the reference level. 
 % In this case the levels are ordered putting Wed in the first position
 DayOfWeek=categorical(DayOfWeek, [4:7 1:3], { 'Wed', 'Thu', 'Fri', 'Sat' 'Sun', 'Mon', 'Tue',});
 
-Trend=(1:n)';
-
-Y.Trend=Trend;
+%% Add to table Y the variables Trend and DayOfWeek
+Y.Trend=(1:n)';
 Y.DayOfWeek=DayOfWeek;
 
 %% Full model with linear trend + sesonality + temperature
@@ -43,7 +39,6 @@ pValueSeasonal =fcdf(FtestSeasonal, 6, n - out1.NumEstimatedCoefficients,"upper"
 % Display the results of the F-test
 fprintf('F-statistic for seasonal component: %.4f\n', FtestSeasonal);
 fprintf('p-value for seasonal component: %.4f\n', pValueSeasonal);
-
 
 %% Alternative way based to compute F test based on function coefTest
 C=[zeros(6,2) eye(6)];
@@ -77,7 +72,7 @@ ylabel('Gas Consumption');
 % title('Gas Consumption and Seasonal Adjustment');
 legend show;
 grid on;
-exportgraphics(gcf,"es1fig.pdf")
+% exportgraphics(gcf,"es1fig.pdf")
 
 
 
@@ -114,4 +109,4 @@ ylabel('Gas Consumption');
 % title('Gas Consumption and Seasonal Adjustment');
 legend show;
 grid on;
-exportgraphics(gcf,"es1dest.pdf")
+% exportgraphics(gcf,"es1dest.pdf")

@@ -19,7 +19,10 @@ fprintf('F-statistic: %.4f\n', F);
 fprintf('p-value: %.4f\n', pValue);
 
 %% Durbin Watson test
-[pvalDW,testDW]=dwtest(out,'exact')
+[pvalDW,testDW]=dwtest(out,'exact');
+% Display the results of the Durbin-Watson test
+fprintf('Durbin-Watson test statistic: %.4f\n', testDW);
+fprintf('p-value for Durbin-Watson test: %.4f\n', pvalDW);
 
 %% Linear restriction
 C = [0 -1 0 1]; % Define the restriction matrix

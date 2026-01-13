@@ -1,8 +1,17 @@
+%% Data loading
 XX=readtable("beer.xlsx","Range","A1:F31","Sheet","data","ReadRowNames",true);
+head(XX,2)
+
+%% yXplot
+XX.DayOfTheWeek=categorical(XX.DayOfTheWeek);
+XX.Location=categorical(XX.Location);
+yXplot(XX(:,1),XX(:,2:end))
+% exportgraphics(gcf,"beeryXplot.pdf")
+%% Multiple regression model
 mdl=fitlm(XX,"LitersOfBeer");
 disp(mdl)
 
-%% remove Location
+%% Remove Location
 mdl1=removeTerms(mdl,"Location");
 disp(mdl1)
 
@@ -17,13 +26,17 @@ C(2,3)=1;
 fprintf('p-value: %.16f\n', pval);
 fprintf('F-test statistic: %.4f\n', Ftest);
 
+%% Application of stepwise procedure
+stepwiselm(XX,"LitersOfBeer")
+
+
 %% Plot of residuals against fitted values
 % Simple: residuals vs fitted using plotResiduals
 plotResiduals(mdl1,'fitted','ResidualType','studentized');
 xlabel('Fitted values');
 ylabel('Deletion residuals');
 
-exportgraphics(gcf,"appesaprpom6.pdf")
+% exportgraphics(gcf,"appesaprpom6.pdf")
 
 %% Prediction
 % Define new data for prediction
