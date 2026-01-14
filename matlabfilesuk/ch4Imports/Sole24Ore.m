@@ -2,6 +2,7 @@
 % The folder is cloned into the QDV2022 subfolder of the current folder
 !git clone https://github.com/IlSole24ORE/QDV2022.git
 
+
 %% Loading the 2022 dataset
 folderName='QDV2022';
 fileName='20221213_QDV2022_001.csv';
