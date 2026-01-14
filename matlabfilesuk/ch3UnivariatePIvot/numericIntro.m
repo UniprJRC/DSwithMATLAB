@@ -7,9 +7,9 @@ Xt.Education=categorical(Xt.Education,{'A','B','C'},'Ordinal',true');
 % Extract quantitative variables into the array Xdq and the table Xtq
 % Note: Xdq is a 107x4 numeric matrix
 %       Xtq is a 107x4 table of only the quantitative variables
-nomiq = ["Wage" "CommutingTime" "SmartWorkHours" "Seniority"];
-Xdq   = Xt{:, nomiq};
-Xtq   = Xt(:, nomiq);
+namesq = ["Wage" "CommutingTime" "SmartWorkHours" "Seniority"];
+Xdq   = Xt{:, namesq};
+Xtq   = Xt(:, namesq);
 
 % Format numeric display with two decimal places
 format bank
@@ -34,14 +34,14 @@ disp(cvt)
 disp('Skewness indices (calculated via skewness)')
 % The second argument 0 requests the unbiased version
 sk = skewness(Xdq, 0);
-skT = array2table(sk, "VariableNames", nomiq);
+skT = array2table(sk, "VariableNames", namesq);
 disp(skT)
 
 %% Compute kurtosis indices
 disp('Kurtosis indices (calculated via kurtosis)')
 % The second argument 0 requests the unbiased version
 kur = kurtosis(Xdq, 0);
-kurT = array2table(kur, "VariableNames", nomiq);
+kurT = array2table(kur, "VariableNames", namesq);
 disp(kurT)
 
 %% Histogram plot of a quantitative variable
