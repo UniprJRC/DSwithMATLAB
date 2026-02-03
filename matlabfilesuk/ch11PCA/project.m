@@ -24,7 +24,7 @@ axis equal
 
 %% Eigenvalues and eigenvectors of S
 [Vini,Lambdaini] = eig(S);
-[~,ord]         = sort(diag(Lambdaini),'descend');
+[~,ord]= sort(diag(Lambdaini),'descend');
 Lambda = Lambdaini(ord,ord);
 V      = Vini(:,ord);
 
@@ -47,7 +47,7 @@ hold('on')
 v1=V(:,1);
 y1=Xtilde*v1;
 
-% Xtildehat = point coordinates of projected coordinated in the original
+% Xtildehat = point coordinates of projected coordinates in the original
 % bivariate space
 Xtildehat=y1.*v1';
 Xhat=Xtildehat+meaX;

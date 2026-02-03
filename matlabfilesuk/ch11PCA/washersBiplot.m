@@ -23,7 +23,7 @@ Zhat = sqn1 * U2 * G2 * V2';
 rowlabs=Xtable.Properties.RowNames;
 varlabs=Xtable.Properties.VariableNames;
 
-%% Biplot A. 
+%% Biplot: representation A. 
 figure; hold('on')
 G = sqn1 * U;
 plot(G(:,1), G(:,2), 'o')
@@ -39,7 +39,7 @@ text(H(:,1)+dx, H(:,2)+dy, varlabs, 'Color', 'b');
 xline(0); yline(0)
 title("Representation A.")
 
-%% Biplot B.
+%% Biplot: representation B.
 figure; hold('on')
 G = sqn1 * U * Gamma;
 plot(G(:,1), G(:,2), 'o')
