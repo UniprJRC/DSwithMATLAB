@@ -23,7 +23,7 @@ disp([meaX1, meaX2])
 disp("Centroid (arithmetic means) of matrix X")
 disp(meaX)
 
-%% Punti in and out of ellipse
+%% Points in and out of ellipse
 insideBoo = inpolygon(X(:,1),X(:,2),Ell(:,1),Ell(:,2));
 
 figure
