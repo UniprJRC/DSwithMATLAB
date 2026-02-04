@@ -37,7 +37,7 @@ disp("Length of the semiaxis of the ellipse")
 disp("Square root of first eigenvalue")
 disp(gamma1)
 
-% gamma2= lunghezza asse minore ellisse
+% gamma2= length of the minor semiaxis of the ellipse
 gamma2=sqrt(Lambda(2,2));
 
 %% Area and perimeter of the ellipse (numeric)

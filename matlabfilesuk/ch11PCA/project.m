@@ -47,8 +47,8 @@ hold('on')
 v1=V(:,1);
 y1=Xtilde*v1;
 
-% Xtildehat = point coordinates of projected coordinates in the original
-% bivariate space
+% Xtildehat = projected coordinates in the original
+% bivariate space (best rank 1 approximation of the original matrix Xtilde)
 Xtildehat=y1.*v1';
 Xhat=Xtildehat+meaX;
 
