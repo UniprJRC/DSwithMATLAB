@@ -1,8 +1,8 @@
-% caricamento dati
+% Data loading 
 Xtable=readtable('writers.xlsx','ReadRowNames',1,'Sheet','dati', ...
     'Range','A2:G18','VariableNamingRule','preserve');
-% Chiamata della funzione pcaFS
-out=pcaFS(Xtable)
+% call to pcaFS
+out=pcaFS(Xtable);
 % print -depsc scricor.eps;
 % print -depsc scriexp.eps;
 % print -depsc scribip.eps;
