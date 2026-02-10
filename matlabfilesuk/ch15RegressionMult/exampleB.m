@@ -52,8 +52,11 @@ disp(Rp_table);
 
 %% Analysis of leverage points
 figure
-plotDiagnostics(mdl,"leverage")
+h=plotDiagnostics(mdl,"leverage","LineWidth",2);
+h(2).LineWidth=2;
+
 % exportgraphics(gcf,'levplot.pdf')
+
 
 %% Scatter of ASSOR agaoinst PROMO
 figure
