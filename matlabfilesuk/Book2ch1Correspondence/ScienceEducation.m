@@ -13,9 +13,9 @@ out=CorAna(X(:,1:2),'datamatrix',true,'Lr',Lr,'Lc',Lc);
 
 
 %% Alternative way
-% Costruzione della tabella pivot
+% Build pivot table
 PVT=pivot(X,"Rows","SCIENCE","Columns","EDUCATION",'RowLabelPlacement','rownames');
-% Inserimento etichette di riga e colonna nella tabella pivot
+% Add row and column labels to the pivot table
 PVT.Properties.RowNames=Lr;
 PVT.Properties.VariableNames=Lc;
 outchk=CorAna(PVT);
@@ -29,7 +29,7 @@ plots=struct;
 plots.alpha='rowgreen';
 CorAnaplot(out,'plots',plots)
 
-%% Etichette con colore che dipende dal contributo dei punti alla spiegazione dell'inerzia
+%% Labels with color which depends on the contribution of the point to the  Inertia
 plots=struct;
 plots.ColorMapLabelCols='CntrbPnt2In'; 
 CorAnaplot(out,'plots',plots)
