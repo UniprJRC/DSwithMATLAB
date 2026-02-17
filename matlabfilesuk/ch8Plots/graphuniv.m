@@ -1,5 +1,5 @@
 %% Import data
-T = readtable("grafuniv.xlsx",'ReadRowNames',true);
+T = readtable("graphuniv.xlsx",'ReadRowNames',true);
 labels = T.Properties.RowNames;
 y    = T{:,1};
 cats = categorical(labels,labels);

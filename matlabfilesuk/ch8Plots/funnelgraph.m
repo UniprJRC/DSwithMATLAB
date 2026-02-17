@@ -6,6 +6,6 @@ Xtable=array2table(x',"RowNames",categories);
 funnelchart(Xtable);
 
 %% Another example
-X = readtable("grafuniv2serie.xlsx",'Sheet','dati','ReadRowNames',true);
+X = readtable("graphuniv2series.xlsx",'Sheet','data','ReadRowNames',true);
 funnelchart(X);
 % print -depsc imbuto.eps;
