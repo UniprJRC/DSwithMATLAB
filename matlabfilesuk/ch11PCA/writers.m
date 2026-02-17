@@ -1,5 +1,5 @@
 % Data loading 
-Xtable=readtable('writers.xlsx','ReadRowNames',1,'Sheet','dati', ...
+Xtable=readtable('writers.xlsx','ReadRowNames',1,'Sheet','data', ...
     'Range','A2:G18','VariableNamingRule','preserve');
 % call to pcaFS
 out=pcaFS(Xtable);
