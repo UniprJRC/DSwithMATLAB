@@ -1,5 +1,6 @@
-% Starting contingency table
-N=[49	111	13	49; 16	551	241	7; 34	358	30	117];    [I,J]=size(N);
+% Initial contingency table
+N=[49	111	13	49; 16	551	241	7; 34	358	30	117];   
+[I,J]=size(N);
 
 %% Compute matrix P
 % n = sample size
@@ -35,7 +36,7 @@ assert(max(abs(c-cchk))<1e-12,"Error in the computation of c")
 distI=mahalFS(ProfilesRows,c',Dc);
 distJ=mahalFS(ProfilesCols',r',Dr);
 
-% manual computation of distI without calling mahalFS
+% Manual computation of distI without calling mahalFS
 distIchk=zeros(I,1);
 for i=1:I
     distIchk(i)=sum(  (ProfilesRows(i,:)-c').^2./(c')  );
@@ -43,7 +44,7 @@ end
 assert(max(abs(distI-distIchk))<1e-12,"Error: the two " + ...
     "inertias are not equal")
 
-%% Total inertica check
+%% Total inertia check
 inI=sum(distI.*r);
 inJ=sum(distJ.*c);
 assert(abs(inI-inJ)<1e-12,"Error: the two inertias are not equal")
@@ -57,7 +58,7 @@ Zchk   = Dr^(1/2) * (ProfilesRows - onesI1 * c') * Dc^(-1/2);
 assert(max(abs(Z-Zchk),[],'all')<1e-12,"Error in the computation of Z")
 
 intot=sum(Z.^2,'all');
-assert(abs(intot-inJ)<1e-12,"Errore di programmazione: le due inerzie non coincidono")
+assert(abs(intot-inJ)<1e-12,"Programming error: the two inertias differ")
 
 %% SVD of Z
 
