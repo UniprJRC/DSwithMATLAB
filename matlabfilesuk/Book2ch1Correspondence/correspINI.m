@@ -174,6 +174,6 @@ CorAnaplot(out)
 %% Call to moonplot
 moonplot(out)
 
-%% Analusys startind directly from Excel file
+%% Analysis starting directly from Excel file 
 X=readtable('toothpaste.xlsx','Range','A1:B1177','Sheet','data');
 CorAna(X,'datamatrix',true)
