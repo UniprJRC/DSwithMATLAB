@@ -16,7 +16,7 @@ CorAnaplot(out)
 %% Call to moonplot
 moonplot(out)
 
-%% Analisi partendo direttamente dal file di Excel
+%%  CorAna with first input argument the original data matrix X
 X=readtable('toothpaste.xlsx','Range','A1:B1177','Sheet','data');
 CorAna(X,'datamatrix',true)
 
@@ -27,6 +27,6 @@ out=CorAna(clothes)
 
 %% car dataset
 load car
-CorAna(car)
+out=CorAna(car)
 
 
