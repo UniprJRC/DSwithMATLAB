@@ -1,16 +1,13 @@
 % Initial contingency table
-N=[49	111	13	49; 16	551	241	7; 34	358	30	117];   
-[I,J]=size(N);
+N=[49	111	13	49; 16	551	241	7; 34	358	30	117];  [I,J]=size(N);
 
 %% Compute matrix P
 % n = sample size
 n=sum(N,'all');
 P = (1/n) * N;
 
-% Verify, via matrix multiplications, that the sum of the elements of $P$
-% is equal to 1.
-onesI1=ones(I,1); 
-onesJ1=ones(J,1); 
+% Verify, via matrix multiplications, that the sum p_ij=1 
+onesI1=ones(I,1);          onesJ1=ones(J,1); 
 sumelP=onesI1'*P*onesJ1;
 assert(abs(sumelP-1)<1e-12,"sum not equal to  1")
 
