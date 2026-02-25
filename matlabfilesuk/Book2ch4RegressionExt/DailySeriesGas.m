@@ -14,7 +14,7 @@ DayOfWeek=categorical(DayOfWeek, [4:7 1:3], { 'Wed', 'Thu', 'Fri', 'Sat' 'Sun', 
 Y.Trend=(1:n)';
 Y.DayOfWeek=DayOfWeek;
 
-%% Full model with linear trend + sesonality + temperature
+%% Full model with linear trend + seasonality + temperature
 out=fitlm(Y,"GasCons","linear");
 
 %% Output of the fit

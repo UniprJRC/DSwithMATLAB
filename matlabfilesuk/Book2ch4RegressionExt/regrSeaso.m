@@ -55,7 +55,7 @@ C=[zeros(3,2) eye(3)];
 [pValueSeasonalCHK, FtestSeasonalCHK,numDF] = coefTest(outCAT,C);
 % Show pvalue and F test pValueSeasonalCHK, FtestSeasonalCHK
 disp(['F test for seasonality ', num2str(FtestSeasonalCHK)]);
-disp(['p-value of the test for sesonality: ', num2str(pValueSeasonalCHK)]);
+disp(['p-value of the test for seasonality: ', num2str(pValueSeasonalCHK)]);
 
 
 
@@ -90,7 +90,7 @@ yTT.Deseasonalized = y - yTT.Seasonal;
 yTT.Residuals = y - predicted; 
 
 %% Plots
-s=stackedplot(yTT,{["y" "Predicted"]},'LineWidth',1)
+s=stackedplot(yTT,{["y" "Predicted"]},'LineWidth',1);
 
 %% Real and predicted
 plot(vdate,y,'-',vdate,predicted,'--','LineWidth',2)
